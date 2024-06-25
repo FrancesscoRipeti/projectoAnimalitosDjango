@@ -119,178 +119,93 @@
             </nav>
         </head>
         <main>
-            <div id="carouselExampleDark" class="carousel carousel-dark slide">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleDark"
-                        data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark"
-                        data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark"
-                        data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark"
-                        data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <!-- Inicio Contactanos! -->
+            <link rel="stylesheet"
+                href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+                integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+                crossorigin="anonymous">
+            <div class="container mt-4">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <form action="mail.php" method="post">
+                            <div class="card rounded-5">
+                                <div class="card-header p-0"
+                                    style="background-color: #3AB397;">
+                                    <div class="text-white text-center py-2">
+                                        <h3><i class="fa fa-envelope"></i>
+                                            Contactanos</h3>
+                                        <p class="m-0">¿Necesitas ayuda? ¿Tienes
+                                            preguntas?</p>
+                                    </div>
+                                </div>
+                                <div class="card-body p-2">
+                                    <div class="form-group">
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"><i
+                                                        class="fa fa-user"
+                                                        style="color: #3AB397;"></i></div>
+                                            </div>
+                                            <input type="text"
+                                                class="form-control" id="nombre"
+                                                name="nombre"
+                                                placeholder="Nombre y Apellido"
+                                                maxlength="50" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"><i
+                                                        class="fa fa-envelope"
+                                                        style="color: #3AB397;"></i></div>
+                                            </div>
+                                            <input type="email"
+                                                class="form-control" id="email"
+                                                name="email"
+                                                placeholder="ejemplo@gmail.com"
+                                                maxlength="60" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"><i
+                                                        class="fa fa-comment"
+                                                        style="color: #3AB397;"></i></div>
+                                            </div>
+                                            <textarea class="form-control"
+                                                name="mensaje"
+                                                placeholder="Envianos tu Mensaje"
+                                                rows="2"
+                                                oninput="autoExpand(this)"
+                                                maxlength="800"
+                                                required></textarea>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="text-center d-flex justify-content-end">
+                                        <div id="counter"
+                                            style="color: black;">0/600</div>
+                                    </div>
+                                    <div class="text-center"
+                                        style="margin: -10px;">
+                                        <input id="enviar" type="submit"
+                                            value="Enviar"
+                                            class="btn text-white btn-block rounded-0 py-2"
+                                            style="background-color: #3AB397;">
+                                        <div id="aviso-limite-msg"
+                                            style="position: absolute; display: none; left: 50%; transform: translateX(-50%); color: red;">Has
+                                            superado el límite de
+                                            caracteres</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="{% static 'img/foto-carrusel-ini (1).jpg'%}"
-                            class="d-block w-100 img-carrusel" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>¿Interesado En Adoptar?</h5>
-                            <p>Puedes visitar nuestra pequeña parte de
-                                adopcion</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" data-bs-interval="2000">
-                        <img src="{% static 'img/foto-carrusel-ini (2).jpg'%}"
-                            class="d-block w-100 img-carrusel" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>¡Adopta y Transforma Vidas!</h5>
-                            <p>Ven a nuestra sección de adopción y conoce a tus
-                                futuros
-                                compañeros de vida. </p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{% static 'img/foto-carrusel-ini (3).jpg'%}"
-                            class="d-block w-100 img-carrusel" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>¡Dale un hogar a un amigo!</h5>
-                            <p>Explora nuestra área de adopción y cambia una
-                                vida hoy.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{% static 'img/foto-carrusel-ini (4).jpg'%}"
-                            class="d-block w-100 img-carrusel" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>¡Haz la Diferencia!</h5>
-                            <p>Visita nuestra sección de adopción y brinda un
-                                hogar lleno de
-                                amor.</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button"
-                    data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"
-                        aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button"
-                    data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"
-                        aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
-            <section>
-                <div class="row" id="art-mas-vendidos">
-                    <!-- articulo 1 ventana index-->
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="{% static 'img/collar 1.jpg' %}"
-                                    class="img-fluid rounded-start"
-                                    alt="Collar Reflectante para Seguridad Nocturna">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Collar Reflectante
-                                        para Seguridad Nocturna</h5>
-                                    <p class="card-text">Diseñado con material
-                                        reflectante para garantizar la
-                                        visibilidad de tu perro durante
-                                        paseos nocturnos.</p>
-                                    <p class="card-text"><small
-                                            class="text-body-secondary">Precio:
-                                            $3500 CLP</small></p>
-                                    <button class="btn btn-primary">Añadir al
-                                        carrito</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <!-- articulo 2 ventana index-->
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="{% static 'img/collar-perro-2.jpg' %}"
-                                    class="img-fluid rounded-start"
-                                    alt="Collar Ajustable de Cuero">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Collar Ajustable de
-                                        Cuero</h5>
-                                    <p class="card-text">Hecho de cuero duradero
-                                        y resistente, se ajusta cómodamente al
-                                        cuello de tu perro,
-                                        ofreciendo estilo y funcionalidad.</p>
-                                    <p class="card-text"><small
-                                            class="text-body-secondary">Precio:
-                                            $5500 CLP</small></p>
-                                    <button class="btn btn-primary">Añadir al
-                                        carrito</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <!-- articulo 3 ventana index-->
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="{% static 'img/collar-perro-3.jpg' %}"
-                                    class="img-fluid rounded-start"
-                                    alt="Collar de Adiestramiento con Control Remoto">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Collar de
-                                        Adiestramiento con Control Remoto</h5>
-                                    <p class="card-text">Entrena a tu perro de
-                                        forma remota con estímulos auditivos o
-                                        vibratorios para
-                                        enseñarle
-                                        obediencia.</p>
-                                    <p class="card-text"><small
-                                            class="text-body-secondary">Precio:
-                                            $9000 CLP</small></p>
-                                    <button class="btn btn-primary">Añadir al
-                                        carrito</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <!-- articulo 4 ventana index-->
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img
-                                    src="{% static 'img/collar-perro-4.jpg.webp' %}"
-                                    class="img-fluid rounded-start"
-                                    alt="Collar de Flores Elegantes">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Collar de Flores
-                                        Elegantes</h5>
-                                    <p class="card-text">Adornado con elegantes
-                                        flores, ideal para ocasiones especiales
-                                        o simplemente para
-                                        lucir
-                                        hermoso en cualquier momento.</p>
-                                    <p class="card-text"><small
-                                            class="text-body-secondary">Precio:
-                                            5900 CLP</small></p>
-                                    <button class="btn btn-primary">Añadir al
-                                        carrito</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
         </main>
         <footer class="container py-5">
             <div class="row">
@@ -370,13 +285,5 @@
                 </div>
             </div>
         </footer>
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-            crossorigin="anonymous"></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-            crossorigin="anonymous"></script>
     </body>
 </html>

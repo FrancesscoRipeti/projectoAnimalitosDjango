@@ -35,6 +35,8 @@ def pago_ani(request):
 def dashboard(request):
     return render(request, 'users/dashboard.html', {'section': 'dashboard'})
         
-def prueba(request):
-    
-    return render(request, 'prueba.html/')
+def contacto_ani(request):
+    return render(request, 'contacto_ani.html/')
+
+def nosotros_ani(request):
+    return render(request, 'nosotros_ani.html/')

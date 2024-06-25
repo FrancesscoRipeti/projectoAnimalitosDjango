@@ -1,16 +1,19 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIMALES_ADOPCION</title>
+    <link rel="stylesheet" href="{% static 'css/style_ani.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+  </head>
+
+  <body>
+
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ANIMALES_ADOPCION</title>
-        <link rel="stylesheet" href="{% static 'css/style_ani.css' %}">
-        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
-    </head>
-    <body>
-        <head>
-          <nav class="navbar navbar-expand-lg" id="navbarPrincipal"
+      <nav class="navbar navbar-expand-lg" id="navbarPrincipal"
           style="background-color: #3AB397;">
           <div class="container d-flex justify-content-center w-100"
               style="background-color: #3AB397;">
@@ -31,7 +34,7 @@
                       class="navbar-nav justify-content-center flex-grow-1 pe-3">
                       <li class="nav-item">
                           <a class="nav-link active text-white"
-                              aria-current="page" href="/index_ani">
+                              aria-current="page" href="#">
                               Principal</a>
                       </li>
                       <li class="nav-item">
@@ -100,7 +103,7 @@
                       </li>
                       <li class="nav-item">
                           <a class="nav-link text-white"
-                              href="/reg_ini_sesion_ani.html"><svg
+                              href="/reg_ini_sesion_ani"><svg
                                   xmlns="http://www.w3.org/2000/svg"
                                   width="32" height="32"
                                   fill="currentColor"
@@ -116,228 +119,306 @@
               </div>
           </div>
       </nav>
-        </head>
-        <main>
-            <section>
-                <center>
-                    <div class="container">
-                      <div class="row g-0 position-relative" id="invitacion-adoptar">
-                        <div class="col-md-6 mb-md-5 p-md-4" id="img-adoptar">
-                          <!-- Añade la clase "circular-image" a la imagen -->
-                          <img src="{% static 'img/skin-gato-adoptar(6).jpg' %}" class="w-100 circular-image" alt="...">
-                        </div>
-                        <div class="col-md-6 p-2 ps-md-0 " id="texto-adoptar">
-                          <h2 class="mt-0">Adopta un amigo felino</h2>
-                          <p>¡Conoce a nuestro adorable amigo en busca de un hogar!</p>
-                          <p>Conoce a Whiskers, un adorable gatito de 2 años en busca de un hogar cariñoso. Whiskers es juguetón,
-                            curioso y le encanta recibir mimos. Está esterilizado, vacunado y listo para ser parte de una familia
-                            que
-                            lo ame y lo cuide para siempre.</p>
-                          <a href="{% static 'img/adopcion_gato.jpg' %}" class="btn btn-primary stretched-link">Proximamente</a>
-                        </div>
-                      </div>
-                      <!--  reverse       -->
-                      <div class="row g-0 position-relative" id="invitacion-adoptar">
-                        <div class="col-md-6 p-5 ps-md-0" id="texto-adoptar">
-                          <!-- Mueve el título antes de la imagen -->
-                          <h2 class="mt-0">Adopción de Perro</h2>
-                          <p>¡Conoce a nuestro adorable amigo en busca de un hogar!</p>
-                          <p>Este es Rocky, un encantador Labrador Retriever de 3 años de edad. Rocky es un perro juguetón y
-                            amigable
-                            que ama pasar tiempo al aire libre y jugar con pelotas. Él está entrenado en casa, esterilizado y
-                            completamente vacunado. ¡Está listo para encontrar su familia para siempre!</p>
-                          <a href="{% static 'img/adopcion.jpg" class="btn btn-primary stretched-link">Proximamente</a>
-                        </div>
-                        <div class="col-md-6 mb-md-0 p-md-4" id="img-adoptar">
-                          <!-- Añade la clase "circular-image" a la imagen -->
-                          <img src="{% static 'img/perro-car1 (17).jpg' %}" class="w-100 circular-image" alt="..." id="circularImage">
-                        </div>
-                      </div>
-                      <div class="row g-0 position-relative" id="invitacion-adoptar">
-                        <div class="col-md-6 mb-md-0 p-md-4" id="img-adoptar">
-                          <!-- Añade la clase "circular-image" a la imagen -->
-                          <img src="{% static 'img/skin-toruga-adoptar(2).jpg' %}" class="w-100 circular-image" alt="...">
-                        </div>
-                        <div class="col-md-6 p-2 ps-md-0" id="texto-adoptar">
-                          <h2 class="mt-0">Encuentra a tu nuevo amigo reptil</h2>
-                          <p>¡Conoce a nuestro adorable amigo en busca de un hogar!</p>
-                          <p>Te presentamos a Shelley, una tortuga terrestre de 5 años de edad en busca de un hogar amoroso. Shelley
-                            es una tortuga tranquila y curiosa que disfruta pasar su tiempo explorando su entorno. Ella está
-                            buscando
-                            un lugar seguro y confortable para vivir y disfrutar de la vida al máximo.</p>
-                          <a href="{% static 'img/adopcion_tortuga.jpg' %}" class="btn btn-primary stretched-link">Proximamente</a>
-                        </div>
-                      </div>
-                      <!--  reverse       -->
-                      <div class="row g-0 position-relative" id="invitacion-adoptar">
-                        <div class="col-md-6 p-5 ps-md-0" id="texto-adoptar">
-                          <!-- Mueve el título antes de la imagen -->
-                          <h2 class="mt-0">Adopcion de Roedor</h2>
-                          <p>¡Conoce a nuestro adorable amigo en busca de un hogar!</p>
-                          <p>Este es Speedy, un adorable hámster dorado de 6 meses de edad. Speedy es curioso y activo, siempre
-                            explorando su entorno en busca de aventuras. Le encanta correr en su rueda y disfrutar de deliciosas
-                            golosinas. Está bien entrenado para su caja y es un compañero perfecto para cualquier hogar. ¡Está
-                            emocionado de encontrar su hogar para siempre y llenarlo de alegría!</p>
-                          <a href="#" class="btn btn-primary stretched-link">Proximamente </a>
-                        </div>
-                        <div class="col-md-6 mb-md-0 p-md-4" id="img-adoptar">
-                          <!-- Añade la clase "circular-image" a la imagen -->
-                          <img src="{% static 'img/skin-de-hamster.jpg' %}" class="w-100 circular-image" alt="..." id="circularImage">
-                        </div>
-                      </div>
-                  </center>
-            </section>
-            <section>
-                <h2>Productos que te podrian interesar</h2>
-                <div id="carouselExampleAutoplaying" class="carousel slid" data-bs-ride="carousel">
-                  <div class="carousel-inner  border">
-                    <div class="carousel-item active">
-                      <div class="row justify-content-center ">
-                        <div class="col-md border">
-                          <img src="{% static 'img/toy1.png' %}" class="d-block w-100 border" alt="...">
-                          <p>Mueñeco Spidy</p>
-                          <a href="#" class="btn btn-primary justify-content-center ">Ver</a>
-                        </div>
-                        <div class="col-md border">
-                          <img src="{% static 'img/toy2.jpg' %}" class="d-block w-100 border" alt="...">
-                          <p>Basket Toy</p>
-                          <a href="#" class="btn btn-primary justify-content-center ">Ver</a>
-                        </div>
-                        <div class="col-md border">
-                          <img src="{% static 'img/toy3.png' %}" class="d-block w-100 border" alt="...">
-                          <p>The Bad Boys.</p>
-                          <a href="#" class="btn btn-primary justify-content-center ">Ver</a>
-                        </div>
-                        <div class="col-md border">
-                          <img src="{% static 'img/toy1.png' %}" class="d-block w-100 border" alt="...">
-                          <p>Muñeco Spidy 2.</p>
-                          <a href="#" class="btn btn-primary justify-content-center ">Ver</a>
-                        </div>
-                        <div class="col-md border">
-                          <img src="{% static 'img/toy2.jpg' %}" class="d-block w-100 border" alt="...">
-                          <p>Basket Toy [Medium].</p>
-                          <a href="#" class="btn btn-primary justify-content-center ">Ver</a>
-                        </div>
-                        <div class="col-md border">
-                          <img src="{% static 'img/toy3.png' %}" class="d-block w-100 border" alt="...">
-                          <p>The Bad Boys Returns.</p>
-                          <a href="#" class="btn btn-primary justify-content-center ">Ver</a>
-                        </div>
-                        <div class="col-md border">
-                          <img src="{% static 'img/toy1.png' %}" class="d-block w-100 border" alt="...">
-                          <p>Mueñco Spidy 2.1</p>
-                          <a href="#" class="btn btn-primary justify-content-center ">Ver</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <div class="row justify-content-center">
-                        <div class="col-md border">
-                          <img src="{% static 'img/toy4.jpg' %}" class="d-block w-100 border" alt="...">
-                          <p>Peluche Tiger</p>
-                          <a href="#" class="btn btn-primary justify-content-center ">Ver</a>
-                        </div>
-                        <div class="col-md border">
-                          <img src="{% static 'img/toy5.jpg' %}" class="d-block w-100 border" alt="...">
-                          <p>Moneky Muñeco</p>
-                          <a href="#" class="btn btn-primary justify-content-center ">Ver</a>
-                        </div>
-                        <div class="col-md border">
-                          <img src="{% static 'img/toy6.jpg' %}" class="d-block w-100 border" alt="...">
-                          <p>Football Toy</p>
-                          <a href="#" class="btn btn-primary justify-content-center ">Ver</a>
-                        </div>
-                        <div class="col-md border">
-                          <img src="{% static 'img/toy7.jpg' %}" class="d-block w-100 border" alt="...">
-                          <p>Pelota Anti-Stress</p>
-                          <a href="#" class="btn btn-primary justify-content-center ">Ver</a>
-                        </div>
-                        <div class="col-md border">
-                          <img src="{% static 'img/toy8.jpg' %}" class="d-block w-100 border" alt="...">
-                          <p>Banana Purple</p>
-                          <a href="#" class="btn btn-primary justify-content-center ">Ver</a>
-                        </div>
-                        <div class="col-md border">
-                          <img src="{% static 'img/toy9.jpg' %}" class="d-block w-100 border" alt="...">
-                          <p>Oso Dona</p>
-                          <a href="#" class="btn btn-primary justify-content-center ">Ver</a>
-                        </div>
-                        <div class="col-md border">
-                          <img src="{% static 'img/toy10.jpg' %}" class="d-block w-100 border" alt="...">
-                          <p>Cocodrilo Peluche</p>
-                          <a href="#" class="btn btn-primary justify-content-center ">Ver</a>
-                        </div>
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                      data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                      data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-            </section>
-        </main>
-        <footer class="container py-5">
-            <div class="row">
-              <div class="col-12 col-md">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img"
-                  viewBox="0 0 24 24">
-                  <title>Product</title>
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path
-                    d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94">
-                  </path>
-                </svg>
-                <small class="d-block mb-3 text-body-secondary">© 2017–2024</small>
+  </head>
+    <main>
+      <section>
+        <center>
+          <div class="container">
+            <div class="row g-0 position-relative" id="invitacion-adoptar">
+              <div class="col-md-6 mb-md-5 p-md-4" id="img-adoptar">
+                <!-- Añade la clase "circular-image" a la imagen -->
+                <img src="{% static 'img/skin-gato-adoptar(6).jpg' %}"
+                  class="w-100 circular-image" alt="...">
               </div>
-              <div class="col-6 col-md">
-                <h5>Features</h5>
-                <ul class="list-unstyled text-small">
-                  <li><a class="link-secondary text-decoration-none" href="#">Proximamente</a></li>
-                  <li><a class="link-secondary text-decoration-none" href="#">Proximamente</a></li>
-                  <li><a class="link-secondary text-decoration-none" href="#">Proximamente</a></li>
-                  <li><a class="link-secondary text-decoration-none" href="#">Proximamente</a></li>
-                  <li><a class="link-secondary text-decoration-none" href="#">Proximamente</a></li>
-                  <li><a class="link-secondary text-decoration-none" href="#">Proximamente</a></li>
-    
-                </ul>
-              </div>
-              <div class="col-6 col-md">
-                <h5>Resources</h5>
-                <ul class="list-unstyled text-small">
-                  <li><a class="link-secondary text-decoration-none" href="#">Proximamente</a></li>
-                  <li><a class="link-secondary text-decoration-none" href="#">Proximamente</a></li>
-                  <li><a class="link-secondary text-decoration-none" href="#">Proximamente</a></li>
-                  <li><a class="link-secondary text-decoration-none" href="#">Proximamente</a></li>
-                  <li><a class="link-secondary text-decoration-none" href="#">Proximamente</a></li>
-                  >
-                </ul>
-              </div>
-              <div class="col-6 col-md">
-                <h5>Resources</h5>
-                <ul class="list-unstyled text-small">
-                  <li><a class="link-secondary text-decoration-none" href="#">Proximamente</a></li>
-                  <li><a class="link-secondary text-decoration-none" href="#">Proximamente</a></li>
-                  <li><a class="link-secondary text-decoration-none" href="#">Proximamente</a></li>
-                  <li><a class="link-secondary text-decoration-none" href="#">Proximamente</a></li>
-    
-                </ul>
-              </div>
-              <div class="col-6 col-md">
-                <h5>About</h5>
-                <ul class="list-unstyled text-small">
-                  <li><a class="link-secondary text-decoration-none" href="#">Proximamente</a></li>
-                  <li><a class="link-secondary text-decoration-none" href="#">Proximamente</a></li>
-                  <li><a class="link-secondary text-decoration-none" href="#">Proximamente</a></li>
-                </ul>
+              <div class="col-md-6 p-2 ps-md-0 " id="texto-adoptar">
+                <h2 class="mt-0">Adopta un amigo felino</h2>
+                <p>¡Conoce a nuestro adorable amigo en busca de un hogar!</p>
+                <p>Conoce a Whiskers, un adorable gatito de 2 años en busca de
+                  un hogar cariñoso. Whiskers es juguetón,
+                  curioso y le encanta recibir mimos. Está esterilizado,
+                  vacunado y listo para ser parte de una familia
+                  que
+                  lo ame y lo cuide para siempre.</p>
+                <a href="{% static 'img/adopcion_gato.jpg' %}"
+                  class="btn btn-primary stretched-link">Proximamente</a>
               </div>
             </div>
-          </footer>
-    </body>
-</html>
+            <!--  reverse       -->
+            <div class="row g-0 position-relative" id="invitacion-adoptar">
+              <div class="col-md-6 p-5 ps-md-0" id="texto-adoptar">
+                <!-- Mueve el título antes de la imagen -->
+                <h2 class="mt-0">Adopción de Perro</h2>
+                <p>¡Conoce a nuestro adorable amigo en busca de un hogar!</p>
+                <p>Este es Rocky, un encantador Labrador Retriever de 3 años de
+                  edad. Rocky es un perro juguetón y
+                  amigable
+                  que ama pasar tiempo al aire libre y jugar con pelotas. Él
+                  está entrenado en casa, esterilizado y
+                  completamente vacunado. ¡Está listo para encontrar su familia
+                  para siempre!</p>
+                <a href="{% static 'img/adopcion.jpg"
+                  class="btn btn-primary stretched-link">Proximamente</a>
+              </div>
+              <div class="col-md-6 mb-md-0 p-md-4" id="img-adoptar">
+                <!-- Añade la clase "circular-image" a la imagen -->
+                <img src="{% static 'img/perro-car1 (17).jpg' %}"
+                  class="w-100 circular-image" alt="..."
+                  id="circularImage">
+              </div>
+            </div>
+            <div class="row g-0 position-relative" id="invitacion-adoptar">
+              <div class="col-md-6 mb-md-0 p-md-4" id="img-adoptar">
+                <!-- Añade la clase "circular-image" a la imagen -->
+                <img src="{% static 'img/skin-toruga-adoptar(2).jpg' %}"
+                  class="w-100 circular-image" alt="...">
+              </div>
+              <div class="col-md-6 p-2 ps-md-0" id="texto-adoptar">
+                <h2 class="mt-0">Encuentra a tu nuevo amigo reptil</h2>
+                <p>¡Conoce a nuestro adorable amigo en busca de un hogar!</p>
+                <p>Te presentamos a Shelley, una tortuga terrestre de 5 años de
+                  edad en busca de un hogar amoroso.
+                  Shelley
+                  es una tortuga tranquila y curiosa que disfruta pasar su
+                  tiempo explorando su entorno. Ella está
+                  buscando
+                  un lugar seguro y confortable para vivir y disfrutar de la
+                  vida al máximo.</p>
+                <a href="{% static 'img/adopcion_tortuga.jpg' %}"
+                  class="btn btn-primary stretched-link">Proximamente</a>
+              </div>
+            </div>
+            <!--  reverse       -->
+            <div class="row g-0 position-relative" id="invitacion-adoptar">
+              <div class="col-md-6 p-5 ps-md-0" id="texto-adoptar">
+                <!-- Mueve el título antes de la imagen -->
+                <h2 class="mt-0">Adopcion de Roedor</h2>
+                <p>¡Conoce a nuestro adorable amigo en busca de un hogar!</p>
+                <p>Este es Speedy, un adorable hámster dorado de 6 meses de
+                  edad. Speedy es curioso y activo, siempre
+                  explorando su entorno en busca de aventuras. Le encanta correr
+                  en su rueda y disfrutar de deliciosas
+                  golosinas. Está bien entrenado para su caja y es un compañero
+                  perfecto para cualquier hogar. ¡Está
+                  emocionado de encontrar su hogar para siempre y llenarlo de
+                  alegría!</p>
+                <a href="#" class="btn btn-primary stretched-link">Proximamente
+                </a>
+              </div>
+              <div class="col-md-6 mb-md-0 p-md-4" id="img-adoptar">
+                <!-- Añade la clase "circular-image" a la imagen -->
+                <img src="{% static 'img/skin-de-hamster.jpg' %}"
+                  class="w-100 circular-image" alt="..."
+                  id="circularImage">
+              </div>
+            </div>
+          </center>
+        </section>
+        <section>
+          <h2>Productos que te podrian interesar</h2>
+          <div id="carouselExampleAutoplaying" class="carousel slid"
+            data-bs-ride="carousel">
+            <div class="carousel-inner  border">
+              <div class="carousel-item active">
+                <div class="row justify-content-center ">
+                  <div class="col-md border">
+                    <img src="{% static 'img/toy1.png' %}"
+                      class="d-block w-100 border" alt="...">
+                    <p>Mueñeco Spidy</p>
+                    <a href="#"
+                      class="btn btn-primary justify-content-center ">Ver</a>
+                  </div>
+                  <div class="col-md border">
+                    <img src="{% static 'img/toy2.jpg' %}"
+                      class="d-block w-100 border" alt="...">
+                    <p>Basket Toy</p>
+                    <a href="#"
+                      class="btn btn-primary justify-content-center ">Ver</a>
+                  </div>
+                  <div class="col-md border">
+                    <img src="{% static 'img/toy3.png' %}"
+                      class="d-block w-100 border" alt="...">
+                    <p>The Bad Boys.</p>
+                    <a href="#"
+                      class="btn btn-primary justify-content-center ">Ver</a>
+                  </div>
+                  <div class="col-md border">
+                    <img src="{% static 'img/toy1.png' %}"
+                      class="d-block w-100 border" alt="...">
+                    <p>Muñeco Spidy 2.</p>
+                    <a href="#"
+                      class="btn btn-primary justify-content-center ">Ver</a>
+                  </div>
+                  <div class="col-md border">
+                    <img src="{% static 'img/toy2.jpg' %}"
+                      class="d-block w-100 border" alt="...">
+                    <p>Basket Toy [Medium].</p>
+                    <a href="#"
+                      class="btn btn-primary justify-content-center ">Ver</a>
+                  </div>
+                  <div class="col-md border">
+                    <img src="{% static 'img/toy3.png' %}"
+                      class="d-block w-100 border" alt="...">
+                    <p>The Bad Boys Returns.</p>
+                    <a href="#"
+                      class="btn btn-primary justify-content-center ">Ver</a>
+                  </div>
+                  <div class="col-md border">
+                    <img src="{% static 'img/toy1.png' %}"
+                      class="d-block w-100 border" alt="...">
+                    <p>Mueñco Spidy 2.1</p>
+                    <a href="#"
+                      class="btn btn-primary justify-content-center ">Ver</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row justify-content-center">
+                  <div class="col-md border">
+                    <img src="{% static 'img/toy4.jpg' %}"
+                      class="d-block w-100 border" alt="...">
+                    <p>Peluche Tiger</p>
+                    <a href="#"
+                      class="btn btn-primary justify-content-center ">Ver</a>
+                  </div>
+                  <div class="col-md border">
+                    <img src="{% static 'img/toy5.jpg' %}"
+                      class="d-block w-100 border" alt="...">
+                    <p>Moneky Muñeco</p>
+                    <a href="#"
+                      class="btn btn-primary justify-content-center ">Ver</a>
+                  </div>
+                  <div class="col-md border">
+                    <img src="{% static 'img/toy6.jpg' %}"
+                      class="d-block w-100 border" alt="...">
+                    <p>Football Toy</p>
+                    <a href="#"
+                      class="btn btn-primary justify-content-center ">Ver</a>
+                  </div>
+                  <div class="col-md border">
+                    <img src="{% static 'img/toy7.jpg' %}"
+                      class="d-block w-100 border" alt="...">
+                    <p>Pelota Anti-Stress</p>
+                    <a href="#"
+                      class="btn btn-primary justify-content-center ">Ver</a>
+                  </div>
+                  <div class="col-md border">
+                    <img src="{% static 'img/toy8.jpg' %}"
+                      class="d-block w-100 border" alt="...">
+                    <p>Banana Purple</p>
+                    <a href="#"
+                      class="btn btn-primary justify-content-center ">Ver</a>
+                  </div>
+                  <div class="col-md border">
+                    <img src="{% static 'img/toy9.jpg' %}"
+                      class="d-block w-100 border" alt="...">
+                    <p>Oso Dona</p>
+                    <a href="#"
+                      class="btn btn-primary justify-content-center ">Ver</a>
+                  </div>
+                  <div class="col-md border">
+                    <img src="{% static 'img/toy10.jpg' %}"
+                      class="d-block w-100 border" alt="...">
+                    <p>Cocodrilo Peluche</p>
+                    <a href="#"
+                      class="btn btn-primary justify-content-center ">Ver</a>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"
+                  aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon"
+                  aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </section>
+        </main>
+        <footer class="container py-5">
+          <div class="row">
+            <div class="col-12 col-md">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                fill="none" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="d-block mb-2" role="img"
+                viewBox="0 0 24 24">
+                <title>Product</title>
+                <circle cx="12" cy="12" r="10"></circle>
+                <path
+                  d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94">
+                </path>
+              </svg>
+              <small class="d-block mb-3 text-body-secondary">©
+                2017–2024</small>
+            </div>
+            <div class="col-6 col-md">
+              <h5>Features</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="link-secondary text-decoration-none"
+                    href="#">Proximamente</a></li>
+                <li><a class="link-secondary text-decoration-none"
+                    href="#">Proximamente</a></li>
+                <li><a class="link-secondary text-decoration-none"
+                    href="#">Proximamente</a></li>
+                <li><a class="link-secondary text-decoration-none"
+                    href="#">Proximamente</a></li>
+                <li><a class="link-secondary text-decoration-none"
+                    href="#">Proximamente</a></li>
+                <li><a class="link-secondary text-decoration-none"
+                    href="#">Proximamente</a></li>
+
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h5>Resources</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="link-secondary text-decoration-none"
+                    href="#">Proximamente</a></li>
+                <li><a class="link-secondary text-decoration-none"
+                    href="#">Proximamente</a></li>
+                <li><a class="link-secondary text-decoration-none"
+                    href="#">Proximamente</a></li>
+                <li><a class="link-secondary text-decoration-none"
+                    href="#">Proximamente</a></li>
+                <li><a class="link-secondary text-decoration-none"
+                    href="#">Proximamente</a></li>
+                >
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h5>Resources</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="link-secondary text-decoration-none"
+                    href="#">Proximamente</a></li>
+                <li><a class="link-secondary text-decoration-none"
+                    href="#">Proximamente</a></li>
+                <li><a class="link-secondary text-decoration-none"
+                    href="#">Proximamente</a></li>
+                <li><a class="link-secondary text-decoration-none"
+                    href="#">Proximamente</a></li>
+
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h5>About</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="link-secondary text-decoration-none"
+                    href="#">Proximamente</a></li>
+                <li><a class="link-secondary text-decoration-none"
+                    href="#">Proximamente</a></li>
+                <li><a class="link-secondary text-decoration-none"
+                    href="#">Proximamente</a></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+      </body>
+
+    </html>

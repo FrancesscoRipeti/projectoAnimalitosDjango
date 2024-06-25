@@ -10,9 +10,7 @@ urlpatterns = [
     path('contacto_ani', views.contacto_ani, name='contacto_ani'),
     path('reg_ini_sesion_ani', views.reg_ini_sesion_ani, name='reg_ini_sesion_ani'),
     path('pago_ani', views.pago_ani, name='pago_ani'),
-    path('dashboard', views.dashboard, name='dashboard'),
-    path('login/', auth_views.LoginView.as_view(), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
-    path('prueba', views.prueba, name='prueba')
+    path('contacto', views.contacto_ani, name='contacto_ani'),
+    path('nosotros', views.nosotros_ani, name='nosotros_ani'),
 ]
 
