@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías y Productos</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_ani.css' %}">  <!-- Ajusta el path según corresponda -->
+</head>
+<body>
+    <h1>Categorías y Productos</h1>
+
+    <h2>Categorías</h2>
+    <div class="categorias-container">
+        {% for cat in categorias %}
+            <div class="box-item-tienda">
+                <img src="{{ cat.imagen.url }}" id="img-carrito-test" alt="{{ cat.nombre }}">
+                <div class="content-txt">
+                    <h3>{{ cat.nombre }}</h3>
+                    <p>{{ cat.descripcion }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <h2>Productos</h2>
+    <div class="productos-container">
+        {% for prod in productos %}
+            <div class="box-item-tienda">
+                <img src="{{ prod.imagen.url }}" id="img-carrito-test" alt="{{ prod.nombre }}">
+                <div class="content-txt">
+                    <h3>{{ prod.nombre }}</h3>
+                    <p>{{ prod.descripcion }}</p>
+                    <p class="precio">${{ prod.precio }}</p>
+                    <p class="categoria">Categoría: {{ prod.categoria.nombre }}</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="{{ prod.id }}">AGREGAR AL CARRITO</a>
+                </div>
+            </div>
+        {% endfor %}
+        <div class="btn-2" id="cargar-mas">
+            CARGAR MAS
+        </div>
+    </div>
+    <script src="{% static 'js/scripts_ani.js' %}"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous">
+        </script>
+</body>
+</html>

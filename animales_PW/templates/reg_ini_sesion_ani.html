@@ -1,0 +1,222 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ANIMALES_ADOPCION</title>
+        <link rel="stylesheet" href="{% static 'css/style_ani.css' %}">
+        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+    </head>
+    <body>
+        <head>
+            <nav class="navbar navbar-expand-lg" id="navbarPrincipal"
+                style="background-color: #3AB397;">
+                <div class="container d-flex justify-content-center w-100"
+                    style="background-color: #3AB397;">
+                    <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo02"
+                        aria-controls="navbarTogglerDemo02"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <h2>🐶Happy Pet🐱</h2>
+                    </a>
+                    <div class="collapse navbar-collapse"
+                        id="navbarTogglerDemo02">
+                        <ul
+                            class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active text-white"
+                                    aria-current="page" href="/index_ani">
+                                    Principal</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white"
+                                    href="/tienda_ani">Tienda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white"
+                                    href="/adopcion_ani">Adopción</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white"
+                                    href="/nosotros">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white"
+                                    href=/contacto>Contacto</a>
+                            </li>
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search"
+                                    placeholder="Buscar" aria-label="Search">
+                                <button class="btn btn-outline-success"
+                                    type="submit">Buscar</button>
+                            </form>
+                            <!-- Icono de carrito usando Font Awesome -->
+                            <div class="nav-item ms-4">
+                                <a class="nav-link" href="/carrito">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </a>
+                            </div>
+                            <li class="carrito-desplegable">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16" fill="currentColor"
+                                    class="bi bi-cart2" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
+                                </svg>
+                                <div id="contenido-carrito-des">
+                                    <table id="lista-del-carrito">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Producto</th>
+                                                <th>Cantidad</th>
+                                                <th>Precio</th>
+                                            </tr>
+
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                        <a href="#"
+                                            class="vaciar-carro">Limpiar</a>
+                                        <thead>
+                                            <tr>
+                                                <th>Total</th>
+                                                <th id="total-precio">$0</th>
+                                                <a href="#"
+                                                    class="pagar">PAGAR</a>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white"
+                                    href="/reg_ini_sesion_ani.html"><svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="32" height="32"
+                                        fill="currentColor"
+                                        class="bi bi-person-circle"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                        <path fill-rule="evenodd"
+                                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                                    </svg></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </head>
+
+    <!-- #region -->
+        
+        <main>
+            <section>
+                <div class="container-fluid" id="gran-container">
+                    <div class="container-fluid" id="container-ini-reg">
+                        <div class="container-form" id="cont-form">
+                            <form id="sing-in" class="sing-in">
+                                <h2>Iniciar Sesión</h2>
+                                <div class="social-networks">
+                                    <ion-icon name="logo-twitch"></ion-icon>
+                                    <ion-icon name="logo-twitter"></ion-icon>
+                                    <ion-icon name="logo-instagram"></ion-icon>
+                                    <ion-icon name="logo-tiktok"></ion-icon>
+                                </div>
+                                <span>Use su correo y contraseña</span>
+                                <div class="container-input">
+                                    <label for="emailSIN"></label>
+                                    <ion-icon name="mail-outline"></ion-icon>
+                                    <input type="text" placeholder="Email" id="email-sing-in" />
+                                </div>
+                                <div class="container-input">
+                                    <label for="passwordSIN"></label>
+                                    <ion-icon name="lock-closed-outline"></ion-icon>
+                                    <input type="password" placeholder="Password" id="password-sing-in" />
+                                </div>
+                                <a href="#">¿Olvidaste tu contraseña?</a>
+                                <button id="btn_incio" class="button" type="submit">
+                                    INICIAR SESIÓN
+                                </button>
+                            </form>
+                        </div>
+                        <div class="container-form" id="cont-form">
+                            <form id="sing-up" class="sing-up">
+                                <h2>Registrarse</h2>
+                                <div class="social-networks">
+                                    <ion-icon name="logo-twitch"></ion-icon>
+                                    <ion-icon name="logo-twitter"></ion-icon>
+                                    <ion-icon name="logo-instagram"></ion-icon>
+                                    <ion-icon name="logo-tiktok"></ion-icon>
+                                </div>
+                                <span>Use su correo electrónico para registrarse</span>
+                                <div class="container-input">
+                                    <label for="nombreSUP"></label>
+                                    <ion-icon name="person-outline"></ion-icon>
+                                    <input type="text" placeholder="Nombre" id="nombre-sing-up" />
+                                </div>
+                                <div class="container-input">
+                                    <label for="emailSUP"></label>
+                                    <ion-icon name="mail-outline"></ion-icon>
+                                    <input type="text" placeholder="Email" id="email-sing-up" />
+                                </div>
+                                <div class="container-input">
+                                    <label for="passwordSUP"></label>
+                                    <ion-icon name="lock-closed-outline"></ion-icon>
+                                    <input type="password" placeholder="Password" id="password-sing-up" />
+                                </div>
+                                <button class="button" type="submit">REGISTRARSE</button>
+                            </form>
+                        </div>
+                        <div class="container-welcome" id="cont-wel">
+                            <div class="welcome-sign-up welcome" id="welcome-sing-in">
+                                <h3>¡Bienvenido!</h3>
+                                <p>
+                                    Ingrese sus datos personales para poder usar todas las funciones del
+                                    sitio
+                                </p>
+                                <button id="btn-sing-in" class="button btn-outline-dark">Registrarse</button>
+                            </div>
+                            <div class="welcome-sign-in welcome" id="welcome-sing-up">
+                                <h3>¡Hola!</h3>
+                                <p>
+                                    Regístrese con sus datos personales para usar todas las funciones
+                                    del sitio
+                                </p>
+                                <button id="btn-sing-up" class="button btn-outline-dark">Iniciar Sesión</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <iframe width="425" height="350"
+                src="https://www.google.com/maps/embed?origin=mfe&pb=!1m14!1m8!1m3!1d24637.230090345016!2d-0.382204!3d39.477148!3m2!1i1024!2i768!4f13.1!3m3!1m2!2sies+abastos!4s11271517402525668942!6i14!3m1!1ses!5m1!1ses">
+                </iframe>
+            </section>
+        </main>
+
+    <!-- #endregion -->
+        
+        <footer>
+
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="{% static 'js/scripts_ani.js' %}"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    </body>
+</html>

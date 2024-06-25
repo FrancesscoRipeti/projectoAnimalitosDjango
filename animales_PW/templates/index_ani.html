@@ -1,0 +1,382 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ANIMALES_ADOPCION</title>
+        <link rel="stylesheet" href="{% static 'css/style_ani.css' %}">
+        <link rel="stylesheet"
+            href="{% static 'bootstrap/css/bootstrap.css' %}">
+    </head>
+    <body>
+        <head>
+            <nav class="navbar navbar-expand-lg" id="navbarPrincipal"
+                style="background-color: #3AB397;">
+                <div class="container d-flex justify-content-center w-100"
+                    style="background-color: #3AB397;">
+                    <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo02"
+                        aria-controls="navbarTogglerDemo02"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <h2>🐶Happy Pet🐱</h2>
+                    </a>
+                    <div class="collapse navbar-collapse"
+                        id="navbarTogglerDemo02">
+                        <ul
+                            class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active text-white"
+                                    aria-current="page" href="/index_ani">
+                                    Principal</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white"
+                                    href="/tienda_ani">Tienda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white"
+                                    href="/adopcion_ani">Adopción</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white"
+                                    href="/nosotros">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white"
+                                    href=/contacto>Contacto</a>
+                            </li>
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search"
+                                    placeholder="Buscar" aria-label="Search">
+                                <button class="btn btn-outline-success"
+                                    type="submit">Buscar</button>
+                            </form>
+                            <!-- Icono de carrito usando Font Awesome -->
+                            <div class="nav-item ms-4">
+                                <a class="nav-link" href="/carrito">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </a>
+                            </div>
+                            <li class="carrito-desplegable">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16" fill="currentColor"
+                                    class="bi bi-cart2" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
+                                </svg>
+                                <div id="contenido-carrito-des">
+                                    <table id="lista-del-carrito">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Producto</th>
+                                                <th>Cantidad</th>
+                                                <th>Precio</th>
+                                            </tr>
+
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                        <a href="#"
+                                            class="vaciar-carro">Limpiar</a>
+                                        <thead>
+                                            <tr>
+                                                <th>Total</th>
+                                                <th id="total-precio">$0</th>
+                                                <a href="#"
+                                                    class="pagar">PAGAR</a>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white"
+                                    href="/reg_ini_sesion_ani.html"><svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="32" height="32"
+                                        fill="currentColor"
+                                        class="bi bi-person-circle"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                        <path fill-rule="evenodd"
+                                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                                    </svg></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </head>
+        <main>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="{% static 'img/foto-carrusel-ini (1).jpg'%}"
+                            class="d-block w-100 img-carrusel" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>¿Interesado En Adoptar?</h5>
+                            <p>Puedes visitar nuestra pequeña parte de
+                                adopcion</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="{% static 'img/foto-carrusel-ini (2).jpg'%}"
+                            class="d-block w-100 img-carrusel" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>¡Adopta y Transforma Vidas!</h5>
+                            <p>Ven a nuestra sección de adopción y conoce a tus
+                                futuros
+                                compañeros de vida. </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'img/foto-carrusel-ini (3).jpg'%}"
+                            class="d-block w-100 img-carrusel" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>¡Dale un hogar a un amigo!</h5>
+                            <p>Explora nuestra área de adopción y cambia una
+                                vida hoy.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'img/foto-carrusel-ini (4).jpg'%}"
+                            class="d-block w-100 img-carrusel" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>¡Haz la Diferencia!</h5>
+                            <p>Visita nuestra sección de adopción y brinda un
+                                hogar lleno de
+                                amor.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button"
+                    data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"
+                        aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button"
+                    data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"
+                        aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <section>
+                <div class="row" id="art-mas-vendidos">
+                    <!-- articulo 1 ventana index-->
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'img/collar 1.jpg' %}"
+                                    class="img-fluid rounded-start"
+                                    alt="Collar Reflectante para Seguridad Nocturna">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Collar Reflectante
+                                        para Seguridad Nocturna</h5>
+                                    <p class="card-text">Diseñado con material
+                                        reflectante para garantizar la
+                                        visibilidad de tu perro durante
+                                        paseos nocturnos.</p>
+                                    <p class="card-text"><small
+                                            class="text-body-secondary">Precio:
+                                            $3500 CLP</small></p>
+                                    <button class="btn btn-primary">Añadir al
+                                        carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <!-- articulo 2 ventana index-->
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'img/collar-perro-2.jpg' %}"
+                                    class="img-fluid rounded-start"
+                                    alt="Collar Ajustable de Cuero">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Collar Ajustable de
+                                        Cuero</h5>
+                                    <p class="card-text">Hecho de cuero duradero
+                                        y resistente, se ajusta cómodamente al
+                                        cuello de tu perro,
+                                        ofreciendo estilo y funcionalidad.</p>
+                                    <p class="card-text"><small
+                                            class="text-body-secondary">Precio:
+                                            $5500 CLP</small></p>
+                                    <button class="btn btn-primary">Añadir al
+                                        carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <!-- articulo 3 ventana index-->
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="{% static 'img/collar-perro-3.jpg' %}"
+                                    class="img-fluid rounded-start"
+                                    alt="Collar de Adiestramiento con Control Remoto">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Collar de
+                                        Adiestramiento con Control Remoto</h5>
+                                    <p class="card-text">Entrena a tu perro de
+                                        forma remota con estímulos auditivos o
+                                        vibratorios para
+                                        enseñarle
+                                        obediencia.</p>
+                                    <p class="card-text"><small
+                                            class="text-body-secondary">Precio:
+                                            $9000 CLP</small></p>
+                                    <button class="btn btn-primary">Añadir al
+                                        carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <!-- articulo 4 ventana index-->
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img
+                                    src="{% static 'img/collar-perro-4.jpg.webp' %}"
+                                    class="img-fluid rounded-start"
+                                    alt="Collar de Flores Elegantes">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Collar de Flores
+                                        Elegantes</h5>
+                                    <p class="card-text">Adornado con elegantes
+                                        flores, ideal para ocasiones especiales
+                                        o simplemente para
+                                        lucir
+                                        hermoso en cualquier momento.</p>
+                                    <p class="card-text"><small
+                                            class="text-body-secondary">Precio:
+                                            5900 CLP</small></p>
+                                    <button class="btn btn-primary">Añadir al
+                                        carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="container py-5">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="none" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" class="d-block mb-2" role="img"
+                        viewBox="0 0 24 24">
+                        <title>Product</title>
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path
+                            d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94">
+                        </path>
+                    </svg>
+                    <small class="d-block mb-3 text-body-secondary">©
+                        2017–2024</small>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Features</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="link-secondary text-decoration-none"
+                                href="#">Proximamente</a></li>
+                        <li><a class="link-secondary text-decoration-none"
+                                href="#">Proximamente</a></li>
+                        <li><a class="link-secondary text-decoration-none"
+                                href="#">Proximamente</a></li>
+                        <li><a class="link-secondary text-decoration-none"
+                                href="#">Proximamente</a></li>
+                        <li><a class="link-secondary text-decoration-none"
+                                href="#">Proximamente</a></li>
+                        <li><a class="link-secondary text-decoration-none"
+                                href="#">Proximamente</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="link-secondary text-decoration-none"
+                                href="#">Proximamente</a></li>
+                        <li><a class="link-secondary text-decoration-none"
+                                href="#">Proximamente</a></li>
+                        <li><a class="link-secondary text-decoration-none"
+                                href="#">Proximamente</a></li>
+                        <li><a class="link-secondary text-decoration-none"
+                                href="#">Proximamente</a></li>
+                        <li><a class="link-secondary text-decoration-none"
+                                href="#">Proximamente</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="link-secondary text-decoration-none"
+                                href="#">Proximamente</a></li>
+                        <li><a class="link-secondary text-decoration-none"
+                                href="#">Proximamente</a></li>
+                        <li><a class="link-secondary text-decoration-none"
+                                href="#">Proximamente</a></li>
+                        <li><a class="link-secondary text-decoration-none"
+                                href="#">Proximamente</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>About</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="link-secondary text-decoration-none"
+                                href="#">Proximamente</a></li>
+                        <li><a class="link-secondary text-decoration-none"
+                                href="#">Proximamente</a></li>
+                        <li><a class="link-secondary text-decoration-none"
+                                href="#">Proximamente</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+    </body>
+</html>

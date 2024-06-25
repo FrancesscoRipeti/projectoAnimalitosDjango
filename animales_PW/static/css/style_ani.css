@@ -1,0 +1,627 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  transition: background-color 0.5s ease;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+/* inicio de la barra de navegacion */
+nav {
+  z-index: 1000;
+  max-width: 100%;
+  min-width: 50%;
+}
+
+#carouselExampleFade {
+  width: 100%;
+  height: 100%;
+  height: 600px;
+
+  /* el proposito del max es que se adapte a los dispositivos el ancho y el alto (a las diferentes pantallas) */
+  min-height: 20%;
+  margin-bottom: cover;
+}
+
+header {
+  width: 100%;
+}
+
+.img-carrusel {
+  width: 100%;
+  height: 100%;
+  display: block;
+  max-width: 1920px;
+  max-height: 880px;
+
+
+}
+
+#navbarPrincipal {
+  height: 70px;
+  font-size: 25px;
+  font-weight: 500;
+  background-color: rgb(252, 246, 195);
+
+}
+
+#navbarPrincipal .navbar-brand {
+  font-size: 40px;
+  font-weight: 500;
+  margin-right: 20px
+}
+
+#carouselExampleFade .carousel-content {
+  bottom: 50%;
+  left: 45%;
+}
+
+#carouselExampleFade .carousel-content h1 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 60px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+  /* añade sombra en el texto */
+}
+
+/* Carrusel de los otros productos que te podrian interesar*/
+#carouselExampleAutoplaying .carousel-inner>img {
+  width: 50px;
+  height: 20%;
+}
+
+#carouselExampleAutoplaying .carousel-inner {
+  height: 250px;
+  max-width: 70%;
+  margin: auto;
+}
+
+#carouselExampleAutoplaying .carousel-item .btn {
+  display: flex;
+  text-align: center;
+}
+
+#carouselExampleAutoplaying .carousel-item p {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  padding-top: 3%;
+}
+
+.carousel-caption h5 {
+  font-size: 44px;
+  color: #ffffff;
+  text-shadow: 8px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption p {
+  font-size: 20px;
+  color: #dddddd;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+/* Fin del carrusel*/
+/* invitacion adoptar inicio*/
+#foto-adopt {
+  width: 100px;
+  height: 10%;
+
+}
+
+.invi-adoptar {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#cont-invi-adopt {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff62;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  gap: 50px;
+}
+
+/*inicio de card inicio*/
+.card-body {
+
+  max-width: 100%;
+  min-height: 20%;
+  margin-top: 25px;
+  margin-bottom: 70px;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+
+.row>.card {
+  left: 15%;
+  right: 25%;
+  max-width: 60%;
+  min-width: 25%;
+  margin-right: 3%;
+  margin-left: 5%;
+  margin-top: 40px;
+}
+
+/*fin de card inicio
+  /**Movil**/
+
+@media (max-width: 767px) {
+  .desktop {
+    display: none;
+  }
+
+  .tablet {
+    display: none;
+
+  }
+}
+
+/**Tablet**/
+
+@media (min-width: 768px) and (max-width: 990px) {
+  .desktop {
+    display: none;
+  }
+
+  .movil {
+    display: none;
+  }
+}
+
+
+/**Escritorio**/
+
+@media (min-width: 991px) {
+  .tablet {
+    display: none;
+  }
+
+  .movil {
+    display: none;
+  }
+}
+
+.circular-image {
+  border-radius: 40%;
+  /* Hace que la imagen sea circular */
+  overflow: hidden;
+  /* Oculta cualquier contenido que exceda el radio */
+  transition: border-radius 1.5s;
+  /* Añade una transición suave al cambiar el radio */
+}
+
+.circular-image:hover {
+  border-radius: 1;
+  /* Cambia el radio a 0 para hacer la imagen cuadrada */
+}
+
+.carousel-item>.img-fluid {
+  width: 1920px;
+  height: 620px;
+  max-width: 100%;
+  min-width: 60%;
+}
+
+/* inicio css de la pagina de tienda */
+
+.carrito-desplegable{
+  position: relative;
+}
+
+.carrito-desplegable #contenido-carrito-des {
+  display: none;
+}
+
+.carrito-desplegable:hover #contenido-carrito-des {
+  display: block;
+  position: absolute;
+  right: 0;
+  backdrop-filter: blur(10px);
+  top: 100%;
+  z-index: 1;
+  background-color: #333;
+  padding: 20px;
+  min-width: 400px;
+  background-color: rgba(51, 51, 51, 0.8);
+}
+table {
+  width: 100%;
+}
+th, td {
+  color: #fff;
+}
+.vaciar-carro {
+  background-color:rgb(138, 138, 138) ;
+  border-radius: 5%;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: 6000;
+  cursor: pointer;
+}
+  
+.pagar {
+  background-color:rgb(138, 138, 138) ;
+  border-radius: 5%;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: 6000;
+  cursor: pointer;
+}
+  
+#img-carrito-test {
+  width: 100%;
+
+} 
+
+#container-tienda {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gran-container-tienda {
+  padding: 0px 40px 80px 0px;
+  text-align: center;
+}
+.contenido-tienda {
+  margin-top: 55px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.box-item-tienda {
+  border-top: 5px solid #000000;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+}
+
+
+.box-item-tienda img {
+  height: 200px;
+}
+
+.content-txt h3 {
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.content-txt p {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.precio {
+  font-size: 17px;
+  font-weight: 700;
+  color: rgb(10, 0, 22) !important;
+}
+
+.btn-2 , .btn-3 {
+  background-color: rgb(23, 0, 31);
+  margin-top: 50px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-2:hover, .btn-3:hover {
+  background-color: rgb(10, 0, 22);
+}
+
+.btn-3 {
+  margin: 0 ;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+/* fin css de la pagina de tienda */
+
+#colaborador {
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#texto-nosotros h2 {
+  color: #000;
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  border: #000;
+  font-size: 70px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  margin-right: 40px;
+}
+
+
+
+#invitacion-adoptar {
+  margin-top: 5%;
+}
+
+#holl {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.inner {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 130px;
+  height: 50px;
+  background-color: green;
+}
+
+.inner2 {
+  position: relative;
+  top: 10px;
+  left: 5px;
+  width: 165px;
+  height: 175px;
+  background-color: red;
+}
+
+/* inicio y registro de sesion */
+#gran-container {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+#container-ini-reg {
+  width: 1200px;
+  height: 500px;
+  display: flex;
+  position: relative;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.3)
+}
+
+#cont-form {
+  width: 100%;
+  overflow: hidden;
+}
+
+#cont-form form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease-in;
+}
+
+#cont-form h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.social-networks {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.social-networks ion-icon {
+  border: 1px solid #C9CCCB;
+  border-radius: 6px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+#cont-form span {
+  font-size: 12px;
+  margin-bottom: 15px;
+
+}
+
+.container-input {
+  width: 300px;
+  height: 40px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 0 15px;
+  background-color: #EEEEEE;
+}
+
+.container-input input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+}
+
+#cont-form a {
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  color: black;
+}
+
+#cont-form .button {
+  width: 170px;
+  height: 45px;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  background-color: #73aaa9;
+  color: white;
+}
+
+/* animacion formulario ini-reg*/
+.sing-up {
+  transform: translateX(-100%);
+}
+
+#container-ini-reg.toggle .sing-in {
+  transform: translateX(100%);
+}
+
+#container-ini-reg.toggle .sing-up {
+  transform: translateX(0);
+}
+
+/* bienvenido  */
+#cont-wel {
+  position: absolute;
+  width: 48.5%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transform: translateX(101%);
+  background-color: #3AB397;
+  transition: transform 0.5s ease-in-out, border-radius 0.5s ease-in-out;
+  overflow: hidden;
+  border-radius: 25% 0 0 25%;
+}
+
+#container-ini-reg.toggle #cont-wel {
+  transform: translateX(0);
+  border-radius: 0 25% 25% 0;
+  background-color: #3AA8AD;
+}
+
+#cont-wel .welcome {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 0 70px;
+  color: white;
+  transition: transform 0.5s ease-in-out;
+}
+
+.welcome {
+  transform: translateX(0%);
+}
+
+.welcome h3 {
+  font-size: 80px;
+}
+
+.welcome p {
+  font-size: 18px;
+  text-align: center;
+}
+
+.welcome .button {
+  border: 2px solid rgb(197, 64, 64);
+  background-color: transparent;
+}
+
+#container-ini-reg.toggle #wel-sing-in {
+  transform: translateX(100%);
+}
+
+#container-ini-reg.toggle #wel-sing-up {
+  transform: translateX(0%);
+}
+
+/* fin de inicio y registro de sesion */
+
+/* sin arreglos css*/
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+#container-art-mas-vendido {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+
+#art-mas-vendidos {
+  width: 100%;
+  height: 100%;
+}
+
+#art-mas-vendidos .card {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+
+  animation-timeline: --image;
+  animation-name: show;
+
+  animation-range: entry 25% cover 30%;
+  animation-fill-mode: both;
+
+  transition: transform 1s, opacity 1s;
+  will-change: transform, opacity;
+}
+
+/* NOSOTROS */
+#row-nosotros {
+  display: flex;
+  flex: column;
+  justify-content: center;
+}
+
+#text-colaborador h5 {
+  width: 100%;
+
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+}
