@@ -299,9 +299,11 @@ th, td {
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+.box-item-tienda:nth-child(n+7) {
   display: inline-block;
 }
-
 
 .box-item-tienda img {
   height: 200px;
